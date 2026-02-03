@@ -148,7 +148,7 @@ if (rsvpForm) {
 
     // --- CONFIG WHATSAPP ---
     // Ganti nomor di bawah dengan nomor WA kamu (format 62...)
-    const noWA = "6281234567890"; 
+    const noWA = "6285348550315"; 
     const teksWA = `Halo, saya *${name}* ingin konfirmasi RSVP undangan pernikahan Rani & Ardi.%0A%0A` +
                    `Status: *${attendance === 'hadir' ? 'InsyaAllah Hadir' : 'Belum Dapat Hadir'}*%0A` +
                    `Pesan: ${guestMessage}`;
