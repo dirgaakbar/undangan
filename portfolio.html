@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Programmer Modern</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Ganti dengan namamu -->
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">Nama Programmer</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-eyebrow">// Programmer Modern</p>
+          <h1 class="hero-title">Halo, Saya Programmer</h1>
+          <p class="hero-subtitle">
+            Saya membangun aplikasi web modern, scalable, dan elegan dengan fokus pada clean code dan pengalaman pengguna yang halus.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Lihat Projects</a>
+            <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+          </div>
+        </div>
+
+        <div class="hero-terminal-wrapper">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">portfolio@dev: ~/</span>
+            </div>
+            <div class="terminal-body">
+              <pre class="terminal-text" id="terminalText"></pre>
+              <span class="terminal-cursor" id="terminalCursor"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo-wrapper">
+          <div class="about-photo-glow"></div>
+          <img
+            src="assets/profile.jpg"
+            alt="Foto Profil"
+            class="about-photo"
+          />
+        </div>
+        <div class="about-content">
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">
+            Programmer yang menyukai clean architecture, automated testing, dan dokumentasi yang jelas.
+          </p>
+          <p class="about-text">
+            Saya berfokus pada pengembangan aplikasi web modern dengan stack JavaScript/TypeScript.
+            Terbiasa bekerja dengan sistem yang kompleks, kolaborasi tim lintas disiplin, dan
+            mengutamakan maintainability jangka panjang.
+          </p>
+          <p class="about-text">
+            Di waktu luang, saya senang bereksperimen dengan tooling developer, automasi workflow, dan
+            membangun side-project open source.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Clean Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Beberapa proyek yang mewakili cara saya membangun solusi modern, performan, dan terukur.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img
+                src="assets/project1.png"
+                alt="Project 1"
+                class="project-image"
+              />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Dashboard Analitik Realtime</h3>
+              <p class="project-description">
+                Dashboard untuk memonitor metrik bisnis secara realtime dengan WebSocket, caching pintar,
+                dan visualisasi interaktif.
+              </p>
+              <div class="project-meta">
+                <span class="badge">React</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">WebSocket</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link">Lihat Detail &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img
+                src="assets/project2.png"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Platform Manajemen Task Tim</h3>
+              <p class="project-description">
+                Aplikasi kolaborasi tim dengan real-time updates, role-based access, dan integrasi CI/CD
+                untuk developer workflow.
+              </p>
+              <div class="project-meta">
+                <span class="badge">TypeScript</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link">Lihat Detail &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 (contoh tambahan) -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <div class="project-placeholder">
+                &lt;code /&gt;
+              </div>
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">API Gateway Microservices</h3>
+              <p class="project-description">
+                Gateway dengan rate limiting, observability, dan authentication terpusat untuk
+                arsitektur microservices berskala besar.
+              </p>
+              <div class="project-meta">
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">Docker</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link">Lihat Detail &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Tertarik bekerja sama, diskusi teknis, atau butuh bantuan membangun produk?
+            Kirim pesan dan saya akan membalas secepat mungkin.
+          </p>
+          <ul class="contact-list">
+            <li><span class="contact-label">Email</span> kamu@email.com</li>
+            <li><span class="contact-label">Lokasi</span> Remote / Indonesia</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama lengkap" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@contoh.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tulis pesanmu di sini..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Kirim Pesan
+          </button>
+          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Nama Programmer. All rights reserved.</p>
+      <p class="footer-meta">Dibangun dengan HTML, CSS, dan JavaScript Vanilla.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
