@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan - Rani & Ardi</title>
+
+  <!-- Google Fonts untuk nuansa romantis -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- File CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background animasi + hearts akan ditangani via CSS & JS -->
+  <div class="animated-background"></div>
+  <div id="floating-elements-container"></div>
+
+  <!-- Overlay agar konten tetap terbaca di atas background -->
+  <div class="overlay"></div>
+
+  <!-- Konten utama undangan -->
+  <main class="invitation-container">
+    <!-- Bagian Hero / Header -->
+    <section class="hero">
+      <p class="opening-text">Dengan penuh rasa syukur, kami mengundang Anda ke acara pernikahan kami</p>
+      <h1 class="couple-names">Rani &amp; Ardi</h1>
+      <p class="wedding-date">20 Februari 2026 &bull; 10.00 WIB</p>
+      <p class="wedding-location">Gedung Serba Guna Harmoni, Jakarta</p>
+    </section>
+
+    <!-- Bagian Countdown -->
+    <section class="countdown-section">
+      <h2>Menuju Hari Bahagia</h2>
+      <div id="countdown" class="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <span class="label">Hari</span>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <span class="label">Jam</span>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <span class="label">Menit</span>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <span class="label">Detik</span>
+        </div>
+      </div>
+      <p id="countdown-message" class="countdown-message"></p>
+    </section>
+
+    <!-- Bagian cerita singkat / quote -->
+    <section class="story-section">
+      <p class="quote">
+        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+        istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram
+        kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+      </p>
+      <p class="quote-source">(QS. Ar-Rum: 21)</p>
+    </section>
+
+    <!-- Tombol RSVP -->
+    <section class="rsvp-section">
+      <button id="open-rsvp" class="btn-primary">
+        Konfirmasi Kehadiran (RSVP)
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal RSVP -->
+  <div id="rsvp-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-rsvp" class="modal-close" aria-label="Tutup">&times;</button>
+      <h2>RSVP Kehadiran</h2>
+      <p class="modal-subtitle">Mohon konfirmasi kehadiran Anda agar kami dapat mempersiapkan yang terbaik.</p>
+
+      <!-- Form RSVP -->
+      <form id="rsvp-form">
+        <!-- Input nama tamu -->
+        <div class="form-group">
+          <label for="guest-name">Nama Tamu</label>
+          <input
+            type="text"
+            id="guest-name"
+            name="guest-name"
+            placeholder="Tuliskan nama lengkap Anda"
+            required
+          />
+        </div>
+
+        <!-- Opsi kehadiran (opsional tapi membantu) -->
+        <div class="form-group">
+          <label for="attendance">Kehadiran</label>
+          <select id="attendance" name="attendance" required>
+            <option value="" disabled selected>Pilih salah satu</option>
+            <option value="hadir">InsyaAllah Hadir</option>
+            <option value="tidak_hadir">Belum Dapat Hadir</option>
+          </select>
+        </div>
+
+        <!-- Pesan tambahan (opsional) -->
+        <div class="form-group">
+          <label for="message">Pesan untuk pengantin (opsional)</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Tulis doa atau ucapan untuk pengantin..."
+          ></textarea>
+        </div>
+
+        <!-- Tombol submit -->
+        <button type="submit" class="btn-primary btn-full">
+          Kirim Konfirmasi
+        </button>
+      </form>
+
+      <!-- Pesan terima kasih setelah submit -->
+      <div id="thank-you-message" class="thank-you-message">
+        <!-- Diisi via JavaScript setelah form submit -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Kontainer untuk confetti -->
+  <div id="confetti-container"></div>
+
+  <!-- Musik latar (gunakan file music.mp3 di folder yang sama dengan index.html) -->
+  <!-- Catatan: Beberapa browser mungkin memblokir autoplay sampai ada interaksi pengguna -->
+  <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
